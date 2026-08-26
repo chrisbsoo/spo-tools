@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: vrpsgd
+    name: spo-tools
     runtime: docker
     dockerfilePath: ./Dockerfile
     plan: starter
