@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vrpsgd
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    autoDeploy: true
