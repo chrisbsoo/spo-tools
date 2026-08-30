@@ -51,3 +51,13 @@ def load_return_matrix(
     prices = fetch_prices(tickers, start, end, use_cache=use_cache)
     returns = prices_to_log_returns(prices)
     return returns.values.astype(np.float64), list(returns.columns)
+
+
+def load_dated_returns(tickers: list[str], start: str, end: str, use_cache: bool = True) -> pd.DataFrame:
+    """Like load_return_matrix, but keeps the date index instead of stripping it to a
+    bare array. Used by consumers (e.g. spo-web's drift detection, via the /returns
+    endpoint) that need each return aligned to the calendar date it occurred on,
+    rather than just a matrix for optimisation.
+    """
+    prices = fetch_prices(tickers, start, end, use_cache=use_cache)
+    return prices_to_log_returns(prices)

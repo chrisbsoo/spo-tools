@@ -37,3 +37,18 @@ class OptimizeResponse(BaseModel):
 
 class CompareResponse(BaseModel):
     results: list[OptimizeResponse]
+
+
+class ReturnsRequest(BaseModel):
+    tickers: list[str] = Field(..., min_length=1, examples=[["AAPL", "MSFT"]])
+    start: date = Field(..., examples=["2020-01-01"])
+    end: date = Field(..., examples=["2025-01-01"])
+
+
+class ReturnRow(BaseModel):
+    date: date
+    returnsByTicker: dict[str, float]
+
+
+class ReturnsResponse(BaseModel):
+    rows: list[ReturnRow]
