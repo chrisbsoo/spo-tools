@@ -24,7 +24,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/), versioning foll
   from the thesis (`project_simplex_sparse`), since plain projection can
   reintroduce mass onto zeroed weights and silently defeat the L1 penalty.
 
-### Known limitations (carried over from the thesis, tracked for v0.2)
+### Known limitations (carried over from the thesis)
 - No transaction-cost / turnover penalty in the objective.
 - No cross-validated hyperparameter selection for `gamma`, `lambda`, `eta`.
 - Portfolio return is approximated as `w^T r` rather than `log(sum_i w_i exp(r_i))`.
