@@ -1,6 +1,6 @@
 # spo-tools: Variance-Reduced Proximal Stochastic Gradient Methods for Sparse Portfolio Optimisation
 
-[![CI](https://github.com/<your-username>/vrpsgd/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-username>/vrpsgd/actions/workflows/ci.yml)
+[![CI](https://github.com/chrisbsoo/vrpsgd/actions/workflows/ci.yml/badge.svg)](https://github.com/chrisbsoo/vrpsgd/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -16,6 +16,8 @@ Optimisation](docs/thesis.pdf)* (University of Bristol, MATH30009, 2026,
 supervised by Prof. Christophe Andrieu). The dissertation derives and proves
 convergence for each algorithm; this repo turns that math into software that
 runs, is tested, and can be called by something other than a notebook.
+
+api docs available at https://spo-tools.onrender.com/docs
 
 ## Why this exists
 
@@ -64,7 +66,7 @@ convergence proofs for all four algorithms are in the [dissertation](docs/thesis
 ## Quickstart
 
 ```bash
-git clone https://github.com/<your-username>/vrpsgd.git
+git clone https://github.com/chrisbsoo/vrpsgd.git
 cd vrpsgd
 pip install -e ".[dev]"
 pytest                      # 37 tests, ~85% coverage
