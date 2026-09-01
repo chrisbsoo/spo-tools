@@ -151,14 +151,6 @@ pretending the first version was correct:
 See `CHANGELOG.md` for the full list, including limitations not yet
 addressed (no transaction costs, no cross-validated hyperparameters).
 
-## Roadmap
-
-- [ ] `v0.2`: turnover/transaction-cost penalty in the objective; walk-forward
-      backtest as an API endpoint (`/backtest`), reproducing dissertation Ch. 6.
-- [ ] `v0.3`: Prox-SAGA (memory-based variant, proved in the dissertation but
-      not yet in this package); Nesterov-accelerated variants (§2.7).
-- [ ] `v0.4`: hosted demo (Fly.io/Render) + a minimal front-end.
-
 ## Provenance
 
 Dissertation co-authored with [Chloe Wong](https://github.com/chloe_wong),
