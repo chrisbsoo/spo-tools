@@ -153,6 +153,19 @@ pretending the first version was correct:
 See `CHANGELOG.md` for the full list, including limitations not yet
 addressed (no transaction costs, no cross-validated hyperparameters).
 
+## Hosting
+
+The reference deployment is a single Docker web service on Render's **free**
+instance type, configured by [`render.yaml`](render.yaml). Free instances sleep
+after 15 minutes without traffic; the next request pays a cold-start cost of
+roughly 20–50 seconds while the container starts and the app boots. Once warm,
+`/health` answers in well under a second.
+
+That trade-off is deliberate: it keeps the demo at zero cost. Callers should
+treat a slow first response as expected rather than an outage, and set client
+timeouts above ~60 seconds. Upgrading the plan to `starter` removes the sleep
+entirely.
+
 ## Provenance
 
 Dissertation co-authored with [Chloe Wong](https://github.com/chloe_wong),

@@ -3,7 +3,9 @@ services:
     name: spo-tools
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: starter
+    # Free instance type: sleeps after 15 minutes without traffic and takes
+    # ~20-50s to wake on the next request. Switch to `starter` for always-on.
+    plan: free
     healthCheckPath: /health
     envVars:
       - key: PYTHONUNBUFFERED
